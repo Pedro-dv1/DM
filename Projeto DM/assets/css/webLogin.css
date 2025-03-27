@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(130deg, #000000, #33443c);
+    height: 100vh;
+    color: white;
+}
+
+
+
+.container, .container2 {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container.hidden, .container2.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+.container, .container2 {
+    max-width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 55%;
+    height: 600px;
+    background-color: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: transform 0.5s ease;
+}
+
+.containerBox {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    height: 665px;
+    width: 50.2%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #33443c;
+    transition: transform 0.5s ease;
+}
+
+.containerBox2 {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 665px;
+    width: 50.2%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 10px;
+    background-color: #33443c;
+    transition: transform 0.5s ease;
+}
+
+.img img {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 30%;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+    transition: transform 0.5s ease;
+}
+
+.img2 img {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 30%;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.4));
+    transition: transform 0.5s ease;
+}
+
+.container.mover-esquerda .img img {
+    transform: translateX(165%);
+}
+
+.container2.voltar-esquerda .img2 img {
+    transform: translateX(-165%);
+}
+
+.container.mover-esquerda .containerBox {
+    transform: translateX(-100%);
+}
+
+.container2.voltar-esquerda .containerBox2 {
+    transform: translateX(100%);
+}
+
+#cadastro {
+    display: none;
+    left: 20%;
+}
+
+.containerBox h1 {
+    position: absolute;
+    top: 15%;
+    left: 33%;
+}
+
+.email {
+    position: relative;
+    top: 200px;
+    left: 22.5%;
+}
+
+.email h3 {
+    margin-left: 10px;
+}
+
+.password {
+    position: relative;
+    top: 215px;
+    left: 22.5%;
+}
+
+.password h3 {
+    margin-left: 10px;
+}
+
+input {
+    width: 50%;
+    height: 40px;
+    background-color: white;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    color: #000000;
+    margin: 10px;
+    outline: none;
+    user-select: none;
+    padding-left: 10px;
+}
+
+i {
+    position: absolute;
+    right: 48%;
+    top: 51%;
+    transform: translateY(-2%);
+    font-size: 20px;
+ }
+
+.bx-lock-alt {
+    color: #000000;
+}
+
+.bx-envelope {
+    color: #000000;
+}
+
+.ent {
+    position: relative;
+    top: 270px;
+    left: 25%;
+    border: none;
+    border-radius: 8px;
+    width: 52%;
+    height: 44px;
+    background-color: #008000;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    outline: none;
+    user-select: none;
+}
+
+.ent:hover {
+    background-color: #32620e;
+    color: white;
+    transition: 0.5s;
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.4));
+}
+
+.register {
+    position: relative;
+    top: 33%;
+    left: 24%;
+}
+
+a {
+    cursor: pointer;
+    position: relative;
+    left: 12%;
+    margin-right: 190px;
+    width: auto;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, text-decoration 0.9s ease;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px; 
+    background-color: #015801;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+  
+a:hover::after {
+    transform: scaleX(1);
+}
+
+.container2 h1 {
+    position: relative;
+    top: 9%;
+    left: 32%;
+}
+
+.btn2 {
+    position: relative;
+    top: -395px;
+    right: 45%;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.3s ease, text-decoration 0.9s ease;
+}
+
+.name {
+    position: relative;
+    top: 90px;
+    left: 22%;
+}
+
+.name h3 {
+    margin-left: 10px;
+}
+
+.email2 {
+    position: relative;
+    top: 100px;
+    left: 22%;
+}
+
+.email2 h3 {
+    margin-left: 10px;
+}
+
+.password2 {
+    position: relative;
+    top: 110px;
+    left: 22%;
+}
+
+.password2 h3 {
+    margin-left: 10px;
+}
+
+.tel {
+    position: relative;
+    top: 120px;
+    left: 22%;
+}
+
+.tel h3 {
+    margin-left: 10px;
+}
+
+.btn {
+    position: relative;
+    top: 150px;
+    left: 23.8%;
+    border: none;
+    border-radius: 8px;
+    width: 52.5%;
+    height: 44px;
+    background-color: #008000;
+    cursor: pointer;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    outline: none;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #32620e;
+    color: white;
+    transition: 0.5s;
+    filter: drop-shadow(7px 7px 7px rgba(0, 0, 0, 0.4));
+}
+
+@media (max-width: 425px) {
+    .container.mover-esquerda .containerBox {
+        transform: translateX(-50%);
+    }
+
+    .container2.voltar-esquerda .containerBox2 {
+        transform: translateX(0%);
+    }
+
+    .container {
+        width: 55%;
+        left: 12%;
+        height: 360px;
+    }
+
+    .containerBox {
+        transform: translateX(-50%);
+        width: 105%;
+        height: 615px;
+    }
+    .containerBox h1 {
+        font-size: 1.8rem;
+        top: 60px;
+        left: 22%;
+    }
+
+    .email, .password {
+        position: relative;
+        top: 120px;
+        left: 12.5%;
+        width: 130%;
+    }
+
+    .ent {
+        top: 19%;
+        left: 15.5%;
+        width: 213px;
+    }
+
+    .register {
+        top: 32%;
+        margin-left: 12px;
+        left: 18%;
+    }
+
+    .register label {
+        display: none;
+    }
+    
+    .container2 {
+        width: 55%;
+        top: 12%;
+        left: 12% !important;
+        height: 480px;
+    }
+
+    .containerBox2 {
+        width: 105%;
+        height: 630px;
+    }
+
+    .container2 h1 {
+        font-size: 1.8rem;
+        top: 42px;
+        left: 19%;
+    }
+
+    .name, .email2, .password2, .tel {
+        position: relative;
+        top: 60px;
+        left: 13%;
+        width: 120%;
+    }
+
+    .btn {
+        width: 65%;
+        left: 16%;
+        top: 13%;
+    }
+
+    .btn2 {
+        right: 55%;
+    }
+
+    .img img, .img2 img {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+        left: 10%;
+        height: 360px;
+    }
+
+    .containerBox {
+        width: 50%;
+        height: 425px;
+    }
+
+    .email, .password {
+        top: 110px;
+        left: 13%;
+        width: 130%;
+    }
+
+    .containerBox h1 {
+        font-size: 1.8rem;
+        top: 50px;
+        left: 22%;
+    }
+
+    .register {
+        top: 42%;
+        font-size: 14px;
+        left: 16.5%;
+    }
+
+    .register a {
+        left: 10px;
+    }
+
+    .ent {
+        top: 20%;
+        left: 16%;
+        width: 215px;
+    }
+
+    .container2 {
+        width: 70%;
+        left: 10% !important;
+        top: 12%;
+        height: 428px;
+    }
+
+    .containerBox2 {
+        width: 50%;
+        height: 490px;
+    }
+
+    .container2 h1 {
+        font-size: 1.8rem;
+        top: 28px;
+        left: 21%;
+    }
+
+    .name, .email2, .password2, .tel {
+        position: relative;
+        top: 48px;
+        left: 16%;
+        width: 120%;
+    }
+
+    .name h3, .email2 h3, .password2 h3, .tel h3 {
+        margin-top: -5px;
+    }
+
+    .btn {
+        width: 65%;
+        left: 19%;
+        top: 12.5%;
+    }
+
+    .btn2 {
+        top: -380px;
+        right: 55%;
+    }
+
+    .container.mover-esquerda .img img {
+        transform: translateX(138%);
+    }
+    
+    .container2.voltar-esquerda .img2 img {
+        transform: translateX(-130%);
+    }
+
+    .img2 img {
+        transform: translateX(10%);
+    }
+
+    .img img, .img2 img {
+        width: 35%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 70%;
+        top: 17%;
+        left: 12%;
+        height: 440px;
+    }
+
+    .containerBox {
+        width: 50%;
+        height: 502px;
+    }
+
+    .email, .password {
+        top: 140px;
+        left: 15%;
+        width: 130%;
+    }
+
+    .containerBox h1 {
+        font-size: 1.8rem;
+        top: 70px;
+        left: 30%;
+    }
+
+    .register {
+        font-size: 16px;
+        top: 45%;
+        left: 17.5%;
+    }
+
+    .register a {
+        left: 40px;
+    }
+
+    .ent {
+        top: 25%;
+        left: 17.5%;
+        width: 274px;
+    }
+
+    .container2 {
+        width: 70%;
+        left: 12% !important;
+        top: 17%;
+        height: 440px;
+    }
+
+    .containerBox2 {
+        width: 50%;
+        height: 502px;
+    }
+
+    .container2 h1 {
+        font-size: 1.8rem;
+        top: 25px;
+        left: 28%;
+    }
+
+    .name, .email2, .password2, .tel {
+        top: 48px;
+        left: 16%;
+        width: 120%;
+    }
+
+    .btn {
+        width: 64%;
+        left: 18%;
+        top: 12%;
+    }
+
+    .img img, .img2 img {
+        width: 32%;
+        top: 158px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 60%;
+        top: 20%;
+        left: 20%;
+        height: 470px;
+    }
+
+    .containerBox {
+        width: 50%;
+        height: 532px;
+    }
+
+    .email, .password {
+        top: 142px;
+        left: 16%;
+        width: 128%;
+    }
+
+    .containerBox h1 {
+        font-size: 2rem;
+        top: 70px;
+        left: 31.5%;
+    }
+
+    .register {
+        font-size: 16px;
+        top: 44%;
+        left: 18%;
+    }
+
+    .register a {
+        left: 82px;
+    }
+
+    .ent {
+        top: 28%;
+        left: 18%;
+        width: 318px;
+    }
+
+    .container2 {
+        width: 60%;
+        left: 20% !important;
+        top: 20%;
+        height: 470px;
+    }
+
+    .containerBox2 {
+        width: 50%;
+        height: 532px;
+    }
+
+    .container2 h1 {
+        font-size: 2rem;
+        top: 30px;
+        left: 29%;
+    }
+
+    .name, .email2, .password2, .tel {
+        top: 60px;
+        left: 16%;
+        width: 120%;
+    }
+
+    .btn {
+        width: 63.2%;
+        left: 18%;
+        top: 15%;
+    }
+
+    .container.mover-esquerda .img img {
+        transform: translateX(155%);
+    }
+    
+    .container2.voltar-esquerda .img2 img {
+        transform: translateX(-145%);
+    }
+
+    .img2 img {
+        left: 56%;
+    }
+
+    .img img, .img2 img {
+        width: 32%;
+        top: 150px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        width: 50%;
+        top: 20%;
+        left: 22%;
+        height: 500px;
+    }
+
+    .containerBox {
+        width: 50%;
+        height: 562px;
+    }
+
+    .email, .password {
+        top: 140px;
+        left: 16%;
+        width: 128%;
+    }
+
+    .email h3, .password h3 {
+        margin-top: 15px;
+    }
+
+    .containerBox h1 {
+        font-size: 2.2rem;
+        top: 70px;
+        left: 31.5%;
+    }
+
+    .register {
+        font-size: 17px;
+        top: 44%;
+        left: 18%;
+    }
+
+    .register a {
+        left: 95px;
+    }
+
+    .ent {
+        top: 28%;
+        left: 18%;
+        width: 345px;
+    }
+
+    .container2 {
+        width: 50%;
+        left: 22% !important;
+        top: 20%;
+        height: 500px;
+    }
+
+    .containerBox2 {
+        width: 50%;
+        height: 562px;
+    }
+
+    .container2 h1 {
+        font-size: 2rem;
+        top: 40px;
+        left: 30%;
+    }
+
+    .name, .email2, .password2, .tel {
+        top: 75px;
+        left: 16%;
+        width: 120%;
+    }
+
+    .btn {
+        width: 62.5%;
+        left: 18%;
+        top: 18%;
+    }
+
+    .container.mover-esquerda .img img {
+        transform: translateX(155%);
+    }
+    
+    .container2.voltar-esquerda .img2 img {
+        transform: translateX(-145%);
+    }
+
+    .img2 img {
+        left: 56%;
+    }
+
+    .img img, .img2 img {
+        width: 32%;
+        top: 150px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/ico/Bem-vindo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Diary Maker</title>
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <div class="logo">
+                <h1>Diary Maker</h1>
+            </div>
+            <div class="content">
+                <div class="search">
+                    <input type="text" id="barraPesquisa" placeholder="Pesquisar tarefas..." onkeyup="filtrarTarefas()">
+                </div>
+                <div class="settings">
+                    <button>config</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="listTitle">
+                <h3>Suas tarefas</h3>
+            </div>
+            <div class="list">
+                <div class="add">
+                    <input type="text" placeholder="Adicione uma tarefa" id="inputTarefa">
+                </div>
+                <div class="date">
+                    <input type="date" id="inputData">
+                </div>
+                <button onclick="adicionarTarefa()">Adicionar</button>
+                <div class="ul">
+                    <ul id="listTarefa"></ul>
+                </div>
+                <p id="mensagem"></p>
+            </div>
+        </div>
+    </main>
+    <script src="../script/mainJs/script.js"></script>
+</body>
+</html>

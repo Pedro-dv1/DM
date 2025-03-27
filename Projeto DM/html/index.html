@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/webLogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'rel='stylesheet'>
+    <link rel="shortcut icon" href="../assets/ico/Bem-vindo.ico" type="image/x-icon">
+    <title>Bem-vindo!</title>
+</head>
+<body>
+    <div class="container" id="login">
+        <form id="formLogin" onsubmit="return false;">
+    <div class="img">
+        <img src="../img/White Minimal Furniture Website Desktop Prototype.png">
+    </div>
+    <div class="containerBox">
+        <h1>Bem-vindo!</h1>
+        <div class="email">
+            <label>
+                <h3>E-mail</h3>
+            </label>
+            <input type="email" placeholder="ex@gmail.com" id="email" required>
+            <i class="bx bx-envelope"></i>
+        </div>
+        <div class="password">
+        <label>
+            <h3>Senha</h3>
+        </label>
+            <input type="password" placeholder="********" id="senha" required>
+            <i class="bx bx-lock-alt"></i>
+        </div>
+        <div class="register">
+            <label>Não tem conta?</label>
+            <a type="button" onclick="cadastro()">Cadastre-se</a>
+        </div>
+        <button class="ent" type="submit" onclick="go()">Entrar</button>
+    </form>
+    </div>
+    </div>
+
+    <div class="container2" id="cadastro">
+        <form id="formCadastro">
+            <div class="img2">
+                <img src="../img/White Minimal Furniture Website Desktop Prototype.png">
+            </div>
+        <div class="containerBox2">
+            <h1>Cadastre-se</h1>
+            <div class="name">
+                <label>
+                    <h3>Nome de usuário</h3>
+                </label>
+                <input type="text" placeholder="Seu nome" required>
+            </div>
+            <div class="email2">
+                <label>
+                    <h3>E-mail</h3>
+                </label>
+                <input type="email" placeholder="ex@gmail.com" id="email2" required>
+            </div>
+            <div class="password2">
+                <label>
+                    <h3>Senha</h3>
+                </label>
+                <input type="password" placeholder="********" id="password2" required>
+            </div>
+            <div class="tel">
+                <label>
+                    <h3>Telefone</h3>
+                </label>
+                <input type="tel" placeholder="(xx) xxxxx-xxxx" required>
+            </div>
+            <button class="btn" type="submit" onclick="back()">Criar conta</button>
+            <button type="button" onclick="voltarParaLogin()" class="btn2">
+                 <i class='bx bx-arrow-back'></i>
+            </button>
+            </div>
+        </form>
+        </div>
+    </div>
+<script src="../script/loginJs/script.js"></script>
+</body>
+</html>
